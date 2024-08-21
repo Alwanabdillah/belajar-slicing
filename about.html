@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="bg-[#E7EFF0]">
+    <nav class="w-full bg-white shadow z-40 fixed">
+      <div class="container mx-auto flex justify-between px-4 overflow-hidden">
+        <div class="logo h-16 overflow-hidden flex items-center">
+          <img src="/img/logo.png" alt="" class="w-18 h-6" />
+        </div>
+        <div class="w-full md:h-10 relative">
+          <ul class="hidden md:flex items-center justify-center">
+            <li class="mx-3 mt-3 text-sm font-semibold">
+              <a
+                class="text-sky-700 font-bold hover:bg-sky-400 rounded-full transition-all duration-200 px-3 py-3 hover:text-white"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="mx-3 mt-3 text-sm font-semibold">
+              <a
+                class="text-sky-700 font-bold hover:bg-sky-400 rounded-full transition-all duration-200 px-3 py-3 hover:text-white"
+                href="about.html"
+                >About Us</a
+              >
+            </li>
+            <li class="mx-3 mt-3 text-sm font-semibold">
+              <a
+                class="text-sky-700 font-bold hover:bg-sky-400 rounded-full transition-all duration-200 px-3 py-3 hover:text-white"
+                href="patner.html"
+                >Patner</a
+              >
+            </li>
+            <li class="mx-3 mt-3 text-sm font-semibold">
+              <a
+                class="text-sky-700 font-bold hover:bg-sky-400 rounded-full transition-all duration-200 px-3 py-3 hover:text-white"
+                href="service.html"
+                >Service</a
+              >
+            </li>
+            <li class="mx-3 mt-3 text-sm font-semibold">
+              <a
+                class="text-sky-700 font-bold hover:bg-sky-400 rounded-full transition-all duration-200 px-3 py-3 hover:text-white"
+                href="galeri.html"
+                >Galeri</a
+              >
+            </li>
+            <li class="mx-3 mt-3 text-sm font-semibold">
+              <a
+                class="text-sky-700 font-bold hover:bg-sky-400 rounded-full transition-all duration-200 px-3 py-3 hover:text-white"
+                href="info.html"
+                >Info</a
+              >
+            </li>
+            <li class="mx-3 mt-3 text-sm font-semibold">
+              <a
+                class="text-sky-700 font-bold hover:bg-sky-400 rounded-full transition-all duration-200 px-3 py-3 hover:text-white"
+                href=""
+                >Karir</a
+              >
+            </li>
+            <li class="mx-3 mt-3 text-sm font-semibold">
+              <a
+                class="text-sky-700 font-bold hover:bg-sky-400 rounded-full transition-all duration-200 px-3 py-3 hover:text-white"
+                href=""
+                >Kontak</a
+              >
+            </li>
+
+            <li class="mx-3 mt-3 text-sm font-semibold">
+              <button onclick="openLogin()"
+                class="text-white bg-sky-700 rounded-full hover:bg-sky-400 transition-all duration-200 px-3 py-3 hover:text-white"
+                href=""
+                >Masuk/Daftar</button>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          onclick="openNavbar()"
+          class="toggle h-16 flex items-center md:hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 fill-[#02546480] cursor-pointer"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </nav>
+    <aside
+      class="w-full h-screen bg-white bg-opacity-90 z-50 fixed md:hidden transition-all duration-200 ease-in-out translate-x-full"
+    >
+      <div
+        class="content backdrop-blur h-full flex items-center justify-center relative z-[99]"
+      >
+        <button onclick="closeNavbar()" class="absolute right-4 top-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="fill-[#018491] w-10 h-10"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"
+            ></path>
+          </svg>
+        </button>
+
+        <ul class="flex flex-col gap-2 text-center">
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="index.html">Home</a>
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="about.html">About Us</a>
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="patner.html">Patner</a>
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="service.html">Service</a>
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="galeri.html">Galeri</a>
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="info.html">Info</a>
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="">Karir</a>
+          </li>
+          <li>
+            <a class="text-xs text-[#018491] font-semibold" href="">Kontak</a>
+          </li>
+          <li>
+          <button onclick="openLogin()"
+                class="text-white bg-sky-700 rounded-full hover:bg-sky-400 transition-all duration-200 px-3 py-3 hover:text-white"
+                href=""
+                >Masuk/Daftar</button>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <section>
+      <div class="max-w-6xl mx-auto pt-20">
+        <div class="flex flex-col gap-5 mx-5">
+          <div
+            class="container mx-auto flex flex-col md:flex-row mt-5 px-10 py-10 items-center bg-white rounded-md sm:mx-5 shadow-md"
+           >
+            <div class="hero-image py-3 w-full h-full mt-5">
+              <img src="./img/Group about.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="title h-full w-full flex-col gap-2 md:flex-col md:right md:mt-20"
+            >
+              <h2
+                class="text-xl md:text-2xl lg:text-3xl text-black font-bold md:text-right"
+              >
+                Tentang Kami
+              </h2>
+              <p
+                class="text-xs my-5 text-black md:text-right md:text-sm md:ml-32"
+              >
+                Jasa kami mencakup bantuan nasihat bisnis, bimbingan dan
+                operasional berbagai fungsi manajemen bisnis, konsultasi
+                manajemen olah agronomist dan agricultural economis pada bidang
+                pertanian dan sejenisnya, rancangan dari metode dan prosedur
+                akuntansi, program akuntansi biaya, prosedur pengawasan anggaran
+                belanja, pemberian nasihat dan bantuan untuk usaha dan pelayanan
+                masyarakat dalam perencanaan, pengorganisasian, efisiensi dan
+                pengawasan, informasi manajemen dan lain-lain.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="container mx-auto mb-10 flex flex-col md:flex-row mt-5 px-10 py-10 items-center bg-white rounded-md sm:mx-5 shadow-md"
+           >
+            <div
+              class="title h-full w-full flex-col gap-2 md:right"
+             ><div>
+              <h2
+                class="text-xl md:text-2xl lg:text-3xl text-black font-bold md:text-left"
+              >
+                Visi
+              </h2>
+              <p
+                class="text-xs my-3 text-black md:text-left md:text-sm md:mr-32"
+              >
+                Grow and Develop With You
+              </p>
+              </div>
+            <div>
+            <div
+              class="title h-full w-full flex-col gap-2 md:flex-col md:right md:mt-6"
+             >
+              <h2
+                class="text-xl md:text-2xl lg:text-3xl text-black font-bold md:text-left"
+              >
+                Misi
+              </h2>
+              <p
+                class="text-xs my-2 text-black md:text-left md:text-sm md:mr-32"
+              >
+                <h3 class="text-sm my-3 mr-12">Selalu sigap dan responsif terhadap dinamika yang terjadi di dunia bisnis</h3>
+                <h3 class="text-sm my-5 mr-12">Selalu berkomitmen untuk tumbuh dan berkembang bersama para pelaku usaha maupun perusahaan yang didasarkan pada kepercayaan dan transparansi</h3>
+                <h3 class="text-sm my-5 mr-12">Bersama Insania Sinergia, keperluan legalitas yang dibutuhkan pelaku usaha maupun perusahaan dari pendirian perusahaan, pengurusan perizinan, laporan keuangan sampai layanan pengurusan pajak, dapat terselesaikan dengan baik sehingga dapat fokus dalam mengembangkan bisnis.</h3>
+              </p>
+              </div>
+            </div>
+            </div>
+            <div class="hero-image py-3 h-fit mt-3">
+              <img src="./img/potoabout.png" alt="" class="w-full h-full" />
+            </div>
+          </div>
+    </section>
+
+    <footer class="h-fit w-full bg-[#02546480] border pt-10">
+      <div class="container md:flex flex-row p-4 md:gap-4">
+        <div class="mb-9">
+          <img src="/img/logo.png" alt="" class="ml-10 mb-3" />
+          <div class="flex flex-row md:text-lg">
+            <img
+              src="/img/home.png"
+              alt=""
+              class="ml-10 h-5 w-7 mt-5 lg:h-6 lg:w-8 lg:ml-8"
+            />
+            <p class="text-sm mt-6 ml-2 text-white lg:text-lg">
+              Jl. Perintis Kemerdekaan No.59, Kota Makassar
+            </p>
+          </div>
+          <div class="flex flex-row ml-3 h-16 w-1/2">
+            <img src="/img/tlpn.png" alt="" class="ml-9 h-5 w-5 mt-2 lg:ml-7" />
+            <p class="text-sm ml-2 text-white mt-2">
+              +6281-2345-6782 <br />insaniasinergia@gmail.com
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="mb-10 md:text-lg lg:ml-12">
+            <h1 class="text-lg ml-12 text-white lg:text-xl">
+              Layanan Insania Sinergia
+            </h1>
+            <p class="text-base mt-3 ml-12 text-white lg:text-sm lg:pb-10">
+              Jasa Pembukuan<br />Jasa Pendampingan <br />Konsultasi Pajak
+              <br />Pembuatan dan Perubahan akta <br />Kuasa hukum pengadilan
+              pajak
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="md:text-lg lg:ml-12  mb-10">
+            <h1 class="text-lg ml-12 text-white lg:text-xl">Sumber Data</h1>
+            <p class="text-base mt-3 ml-12 text-white lg:text-sm lg:pb-10">
+              FAQ<br />Studi Kasus pajak
+            </p>
+          </div>
+          
+        </div>
+        <div>
+          <div class="mb-10 md:text-lg lg:ml-12">
+            <h1 class="text-lg ml-12 text-white lg:text-xl">
+              Layanan Insania Sinergia
+            </h1>
+            <p class="text-base mt-3 ml-12 text-white lg:text-sm lg:pb-10">
+              About<br />Contact<br>
+              Careers<br />Youtube<br>Instagram
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const sidebar = document.querySelector("aside");
+
+      function openNavbar() {
+        sidebar.classList.add("translate-x-0");
+        sidebar.classList.remove("translate-x-full");
+      }
+
+      function closeNavbar() {
+        sidebar.classList.remove("translate-x-0");
+        sidebar.classList.add("translate-x-full");
+      }
+    </script>
+  </body>
+</html>
